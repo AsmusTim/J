@@ -8,7 +8,6 @@ public class Solution {
             Narayama(arr);
             System.out.println(st[arr[0]] + st[arr[1]] + st[arr[2]]);
         }
-
     }
 
     public static void reverse(int[] arr, int begin, int end){
@@ -33,6 +32,9 @@ public class Solution {
         }
 
         for(int i = arr.length - 1; i > index; --i){
+
+            if(index == -1) break;
+
             if(arr[i] > arr[index]){
                 int mid = arr[i];
                 arr[i] = arr[index];

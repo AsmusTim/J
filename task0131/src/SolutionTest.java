@@ -18,8 +18,4 @@ class SolutionTest {
     public void shouldReturnFloatValue() {
         assertEquals(1, Solution.getMetreFromCentimetre(105), 0.000001);
     }
-
-    @org.junit.jupiter.api.Test
-    void getMetreFromCentimetre() {
-    }
 }
