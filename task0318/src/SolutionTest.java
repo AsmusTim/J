@@ -30,6 +30,7 @@ public class SolutionTest {
             Integer.parseInt(name);
         }
         catch (NumberFormatException e){
+        
             System.setIn(in2);
             sc = new Scanner(System.in);
             if(!sc.hasNextInt()){
