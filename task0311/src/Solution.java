@@ -3,6 +3,6 @@ public class Solution {
         writeToConsole("1");
     }
     public static void writeToConsole(String s){
-        System.out.println("Printing: " + s);
+        System.out.print("Printing: " + s);
     }
 }

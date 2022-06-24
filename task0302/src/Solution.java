@@ -3,8 +3,7 @@ public class Solution {
         printString("abc");
     }
 
-    public static boolean printString(String str){
+    public static void printString(String str){
         System.out.println(str);
-        return true;
     }
 }

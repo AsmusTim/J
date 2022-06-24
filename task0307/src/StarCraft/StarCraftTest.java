@@ -1,7 +1,7 @@
 package StarCraft;
 
 import org.junit.Before;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.testng.annotations.BeforeTest;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -12,7 +12,8 @@ public class StarCraftTest {
     public StarCraft.Protos[] Parr = new StarCraft.Protos[5];
     public StarCraft.Terr[] Tarr = new StarCraft.Terr[12];
 
-    public void Data(){
+    @Before
+    public void data(){
         for(int i = 0; i < 10; ++i){
             Zarr[i] = new StarCraft.Zegar("z" + i);
         }
@@ -28,8 +29,7 @@ public class StarCraftTest {
     }
 
     @Test
-    void testOnNotNullZ() {
-        Data();
+    public void testOnNotNullZ() {
         boolean a = true;
         for(StarCraft.Zegar i: Zarr){
             if(i == null) {a = false; break;}
@@ -37,8 +37,7 @@ public class StarCraftTest {
         assertTrue(a);
     }
     @Test
-    void testOnNotNullP() {
-        Data();
+    public void testOnNotNullP() {
         boolean a = true;
         for(StarCraft.Protos i: Parr){
             if(i == null) {a = false; break;}
@@ -46,8 +45,7 @@ public class StarCraftTest {
         assertTrue(a);
     }
     @Test
-    void testOnNotNullT() {
-        Data();
+    public void testOnNotNullT() {
         boolean a = true;
         for(StarCraft.Terr i: Tarr){
             if(i == null) {a = false; break;}
@@ -56,8 +54,7 @@ public class StarCraftTest {
     }
 
     @Test
-    void UniqueNameZ(){
-        Data();
+    public void UniqueNameZ(){
         boolean a = true;
         for(int i = 0; i < Zarr.length; ++i){
             for(int j = i + 1; j < Zarr.length; ++j){
@@ -67,8 +64,7 @@ public class StarCraftTest {
         assertTrue(a);
     }
     @Test
-    void UniqueNameP(){
-        Data();
+    public void UniqueNameP(){
         boolean a = true;
         for(int i = 0; i < Parr.length; ++i){
             for(int j = i + 1; j < Parr.length; ++j){
@@ -78,8 +74,7 @@ public class StarCraftTest {
         assertTrue(a);
     }
     @Test
-    void UniqueNameT(){
-        Data();
+    public void UniqueNameT(){
         boolean a = true;
         for(int i = 0; i < Tarr.length; ++i){
             for(int j = i + 1; j < Tarr.length; ++j){
@@ -89,8 +84,7 @@ public class StarCraftTest {
         assertTrue(a);
     }
     @Test
-    void UniqueNameZP(){
-        Data();
+    public void UniqueNameZP(){
         boolean a = true;
         for(StarCraft.Zegar i: Zarr){
             for(StarCraft.Protos j: Parr){
@@ -100,8 +94,7 @@ public class StarCraftTest {
         assertTrue(a);
     }
     @Test
-    void UniqueNameZT(){
-        Data();
+    public void UniqueNameZT(){
         boolean a = true;
         for(StarCraft.Zegar i: Zarr){
             for(StarCraft.Terr j: Tarr){
@@ -111,8 +104,7 @@ public class StarCraftTest {
         assertTrue(a);
     }
     @Test
-    void UniqueNamePT(){
-        Data();
+    public void UniqueNamePT(){
         boolean a = true;
         for(StarCraft.Protos i: Parr){
             for(StarCraft.Terr j: Tarr){

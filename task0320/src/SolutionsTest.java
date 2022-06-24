@@ -3,16 +3,15 @@ import org.junit.Before;
 import org.testng.annotations.Test;
 import static org.junit.jupiter.api.Assertions.*;
 //import java.io.*;
+import java.io.*;
 import java.util.Scanner;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.InputStream;
-import java.io.PrintStream;
+//import java.io.InputStream;
+
 
 public class SolutionsTest {
     public final ByteArrayOutputStream OutStream = new ByteArrayOutputStream();
-    public final PrintStream OriginOut = System.out;
+    //public final PrintStream OriginOut = System.out;
 
     public static void PrintErr(){System.out.print("Что-то не так!");}
     public static void PrintAnsw(String name){System.out.printf("%s зарабатывает 5 000$. Xa-xa-xa", name);}
@@ -25,7 +24,7 @@ public class SolutionsTest {
     @Test
     public void CorrectInput(){
         ByteArrayInputStream in = new ByteArrayInputStream("Name".getBytes());
-        InputStream sysInBackup = System.in;
+        //InputStream sysInBackup = System.in;
         System.setIn(in);
 
         Scanner sc = new Scanner(System.in);
@@ -39,26 +38,29 @@ public class SolutionsTest {
             return;
         }
         PrintErr();
-
         assertEquals("Name зарабатывает 5 000$. Xa-xa-xa", OutStream.toString());
     }
-    @Test
-    public void NoCorrectInput(){
-        ByteArrayInputStream in = new ByteArrayInputStream("1".getBytes());
-        InputStream sysInBackup = System.in;
-        System.setIn(in);
+    /*@Test
+    public void FirstInt() {
+        //setOutStream();
+        ByteArrayInputStream in1 = new ByteArrayInputStream("1".getBytes());
+        //InputStream sysInBackup = System.in;
+
+        System.setIn(in1);
 
         Scanner sc = new Scanner(System.in);
-        String name = sc.nextLine();
+        String name;
 
-        try {
+        name = sc.nextLine();
+        try{
             Integer.parseInt(name);
         }
-        catch(NumberFormatException e){
+        catch (NumberFormatException e){
             PrintAnsw(name);
-            return;
+            //return;
         }
         PrintErr();
+        //OutStream.flush();
         assertEquals("Что-то не так!", OutStream.toString());
-    }
+    }*/
 }
