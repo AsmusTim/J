@@ -6,6 +6,13 @@ public class Circle {
     private String color;
 
     public Circle(){}
+    public Circle(double x, double y){
+        this.centerX = x;
+        this.centerY = y;
+        this.radius = 1;
+        this.width = 1.1;
+        this.color = "Black";
+    }
     public Circle(double x, double y, double r){
         this.centerX = x;
         this.centerY = y;
