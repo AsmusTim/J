@@ -1,5 +1,3 @@
-package Animal;
-
 public class Animal {
     protected String name;
     protected int age;
@@ -29,10 +27,6 @@ public class Animal {
         this.name = name;
         this.age = age;
         this.address = address;
-    }
-    @Override
-    protected void finalize() throws Throwable {
-        System.out.print("Object is die");
     }
 
     public void setAge(int age) {
