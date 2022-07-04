@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="21372710-cd9e-41c1-902e-66ab363f98bf" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../task0825/src/Solution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task0825/src/SolutionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task0826/src/Solution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task0826/src/SolutionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task0827/src/Solution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task0827/src/SolutionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task0829/src/Solution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task0829/src/SolutionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task0830/src/Solution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task0830/src/SolutionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task0915/src/Solution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../task0915/src/SolutionTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="JUnit4 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2BTXFNWnWtmeU50Sq7fqx5jjLUU" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
+    "create.test.in.the.same.root": "true",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "configurable.group.appearance"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.SolutionTest.customerException">
+    <configuration name="SolutionTest.customerException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="task0907" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SolutionTest" />
+      <option name="METHOD_NAME" value="customerException" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SolutionTest.interceptionException5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="task0907" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SolutionTest" />
+      <option name="METHOD_NAME" value="interceptionException5" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SolutionTest.interceptionException6" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="task0907" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SolutionTest" />
+      <option name="METHOD_NAME" value="interceptionException6" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SolutionTest.interceptionException6_1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="task0907" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SolutionTest" />
+      <option name="METHOD_NAME" value="interceptionException6_1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SolutionTest.interceptionException6_2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="task0907" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SolutionTest" />
+      <option name="METHOD_NAME" value="interceptionException6_2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SolutionTest.customerException" />
+        <item itemvalue="JUnit.SolutionTest.interceptionException6_2" />
+        <item itemvalue="JUnit.SolutionTest.interceptionException6_1" />
+        <item itemvalue="JUnit.SolutionTest.interceptionException6" />
+        <item itemvalue="JUnit.SolutionTest.interceptionException5" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="21372710-cd9e-41c1-902e-66ab363f98bf" name="Changes" comment="" />
+      <created>1656930945313</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1656930945313</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
