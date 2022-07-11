@@ -4,8 +4,9 @@ import java.util.stream.Collectors;
 
 public class Vowels {
 
-    public static Map<Boolean, Long> getCount(String str) {
-        return (Map<Boolean, Long>) str.chars().boxed().collect(Collectors.groupingBy(o -> "101 117 111 97 105".contains(String.valueOf(o)), Collectors.counting())).values();
+    public static long getCount(String str) {
+        Long c = str.chars().boxed().collect(Collectors.groupingBy(o -> "101 117 111 97 105".contains(String.valueOf(o)), Collectors.counting())).get(true);
+        return  c != null ? c : 0;
     }
 
     public static void main(String[] args) {
