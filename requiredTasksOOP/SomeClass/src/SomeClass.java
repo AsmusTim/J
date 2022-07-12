@@ -14,6 +14,17 @@ public class SomeClass<T> implements List<T> {
         }
         return current;
     }
+    private void delNode(Node<T> node){
+        if(this.size == 1){
+            this.first = null;
+            this.last = null;
+        }
+        if(node == this.first){
+            this.first = this.first.getNext();
+        }
+        node.delThisNode();
+        this.size--;
+    }
 
     @Override
     public boolean add(T data) {
@@ -94,7 +105,9 @@ public class SomeClass<T> implements List<T> {
 
             @Override
             public T next() {
-                return get(index++);
+                T res = get(index);
+                index++;
+                return res;
             }
         };
     }
@@ -126,8 +139,7 @@ public class SomeClass<T> implements List<T> {
             Node<T> current = this.first;
             while (current != null) {
                 if (o.equals(current.getData())) {
-                    current.delNode();
-                    this.size--;
+                    delNode(current);
                     return true;
                 } else {
                     current = current.getNext();
@@ -141,7 +153,7 @@ public class SomeClass<T> implements List<T> {
         if(index < 0 || index >= this.size()){ throw new IndexOutOfBoundsException(); }
         Node<T> current = this.runToList(index);
         T t = (T) current.getData();
-        current.delNode();
+        delNode(current);
         this.size--;
         return t;
     }
@@ -203,20 +215,23 @@ public class SomeClass<T> implements List<T> {
 
     @Override
     public boolean removeAll(Collection<?> c) {
-        Iterator<?> e = c.iterator();
-        while(e.hasNext()){
-            this.remove(e.next());
+        for (Object o : c) {
+            if(this.remove(o));
         }
         return true;
     }
 
     @Override
     public boolean retainAll(Collection<?> c) {
-        Iterator<?> e = c.iterator();
-        while(e.hasNext()){
-            if(!this.contains(e.next())){
-                this.remove(e.next());
+        Node<T> current = this.first;
+        while (current != null){
+            if(!c.contains(current.getData())){
+                Node<T> mid = current.getNext();
+                delNode(current);
+                current = mid;
+                continue;
             }
+            current = current.getNext();
         }
         return true;
     }
@@ -239,7 +254,7 @@ public class SomeClass<T> implements List<T> {
         Node<T> current = this.first;
         int index = 0;
         while(current != null){
-            if(current.equals(o)){ return index; }
+            if(o.equals(current.getData())){ return index; }
             else{
                 current = current.getNext();
                 index++;
@@ -254,7 +269,7 @@ public class SomeClass<T> implements List<T> {
         int index = 0;
         int lastIndex = -1;
         while(current != null){
-            if(current.equals(o)){ lastIndex = index; }
+            if(current.getData().equals(o)){ lastIndex = index; }
             current = current.getNext();
             index++;
         }
@@ -274,7 +289,9 @@ public class SomeClass<T> implements List<T> {
 
             @Override
             public T next() {
-                return get(index++);
+                int i = index;
+                index++;
+                return get(i);
             }
 
             @Override
@@ -284,22 +301,27 @@ public class SomeClass<T> implements List<T> {
 
             @Override
             public T previous() {
-                return get(index--);
+                int i = index - 1;
+                index--;
+                return get(i);
             }
 
             @Override
             public int nextIndex() {
-                return index++;
+                int i = index + 1;
+                return hasNext() ? i : size;
             }
 
             @Override
             public int previousIndex() {
-                return index--;
+                int i = index - 1;
+                return hasPrevious() ? i : -1;
             }
 
             @Override
             public void remove() {
-
+                Node<T> node = runToList(index);
+                SomeClass.this.delNode(node);
             }
 
             @Override
@@ -309,7 +331,8 @@ public class SomeClass<T> implements List<T> {
 
             @Override
             public void add(T t) {
-                SomeClass.this.add(index++, t);
+                int i = index + 1;
+                SomeClass.this.add(i, t);
             }
         };
     }
@@ -328,7 +351,9 @@ public class SomeClass<T> implements List<T> {
 
                 @Override
                 public T next() {
-                    return get(i++);
+                    int it = i;
+                    i++;
+                    return get(it);
                 }
 
                 @Override
@@ -338,22 +363,27 @@ public class SomeClass<T> implements List<T> {
 
                 @Override
                 public T previous() {
-                    return get(i--);
+                    int it = i - 1;
+                    i--;
+                    return get(it);
                 }
 
                 @Override
                 public int nextIndex() {
-                    return i++;
+                    int it = i + 1;
+                    return hasNext() ? it : size;
                 }
 
                 @Override
                 public int previousIndex() {
-                    return i--;
+                    int it = i - 1;
+                    return hasPrevious() ? it : -1;
                 }
 
                 @Override
                 public void remove() {
-
+                    Node<T> node = runToList(i);
+                    SomeClass.this.delNode(node);
                 }
 
                 @Override
@@ -363,7 +393,8 @@ public class SomeClass<T> implements List<T> {
 
                 @Override
                 public void add(T t) {
-                    SomeClass.this.add(i++, t);
+                    int it = i + 1;
+                    SomeClass.this.add(it, t);
                 }
             };
         }
@@ -374,8 +405,8 @@ public class SomeClass<T> implements List<T> {
         if(fromIndex < 0 || toIndex > size || fromIndex > toIndex) throw new IndexOutOfBoundsException();
         List<T> list = new ArrayList<>();
         Node<T> current = this.runToList(fromIndex);
-        for(int i = 0; i < toIndex; ++i){
-            list.add((T) current.getData());
+        for(int i = 1; i < toIndex - fromIndex + 1; ++i){
+            list.add(current.getData());
             current = current.getNext();
         }
         return list;

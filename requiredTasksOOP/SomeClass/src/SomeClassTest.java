@@ -1,23 +1,25 @@
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 import static org.junit.Assert.*;
 
 public class SomeClassTest {
 
-    List<Integer> sc1;
+    SomeClass<Integer> sc1;
     List sc2;
+    List<Integer> list;
 
     @Before
     public void createData(){
-        sc1 = new SomeClass<Integer>();
+        sc1 = new SomeClass<>();
         for(int i = 0; i < 12; ++i){
             sc1.add(i);
+        }
+        list = new ArrayList<>();
+        for(int i = 0; i < 5; ++i){
+            list.add(i);
         }
     }
 
@@ -36,13 +38,13 @@ public class SomeClassTest {
     public void testAdd() {
         sc1.add(3, -200);
         assertEquals(13, sc1.size());
-        assertEquals(Optional.of(-200), sc1.get(3));
+        assertEquals(Optional.of(-200), Optional.of(sc1.get(3)));
     }
 
     @Test
     public void set() {
         sc1.set(5, -200);
-        assertEquals(Optional.of(-200), sc1.get(5));
+        assertEquals(Optional.of(-200), Optional.of(sc1.get(5)));
         assertEquals(12, sc1.size());
     }
 
@@ -64,7 +66,7 @@ public class SomeClassTest {
         for(int i = 0; i < 3 && e.hasNext(); ++i){
             e.next();
         }
-        assertEquals(3, Optional.ofNullable(e.next()));
+        assertEquals(Optional.of(3), Optional.ofNullable(e.next()));
         while (e.hasNext()){
             e.next();
         }
@@ -87,8 +89,8 @@ public class SomeClassTest {
     @Test
     public void remove() {
         sc1.remove(1);
-        assertEquals(11, sc1.size());
-        assertEquals(Optional.of(2), sc1.get(1));
+        assertEquals(10, sc1.size());
+        assertEquals(Optional.of(2), Optional.of(sc1.get(1)));
     }
 
     @Test
@@ -142,30 +144,82 @@ public class SomeClassTest {
 
     @Test
     public void removeAll() {
+
+        sc1.removeAll(list);
+        int sum = 0;
+        for(int i: sc1){
+            sum += i;
+        }
+        assertEquals(56, sum);
+        assertEquals(7, sc1.size());
     }
 
     @Test
     public void retainAll() {
+        sc1.retainAll(list);
+        int sum = 0;
+        for(int i: sc1){ sum += i; }
+        assertEquals(5, sc1.size());
+        assertEquals(10, sum);
     }
 
 
     @Test
     public void indexOf() {
+        assertEquals(5, sc1.indexOf(5));
     }
 
     @Test
     public void lastIndexOf() {
+        sc1.add(5);
+        assertEquals(12, sc1.lastIndexOf(5));
     }
 
     @Test
     public void listIterator() {
+        /*next*/
+        ListIterator<Integer> e = sc1.listIterator();
+        assertEquals(Optional.of(0), Optional.ofNullable(e.next()));
+        /*previous*/
+        e.next();
+        assertEquals(Optional.of(1), Optional.ofNullable(e.previous()));
+        /*nextIndex*/
+        assertEquals(Optional.of(2), Optional.of(e.nextIndex()));
+        /*previousIndex*/
+        assertEquals(Optional.of(0), Optional.of(e.previousIndex()));
+        /*set*/
+        e.set(100);
+        assertEquals(Optional.of(100), Optional.of(sc1.get(1)));
+        /*add*/
+        e.add(200);
+        e.next();
+        assertEquals(Optional.of(200), Optional.of(e.next()));
+        /*remove*/
+        e.remove();
+        assertEquals(Optional.of(12), Optional.of(sc1.size()));
+        /*check correct work remove*/
+        int count = 0;
+        for(int i: sc1){ count++; }
+        assertEquals(12, count);
+
+
     }
 
     @Test
     public void testListIterator() {
+        ListIterator<Integer> e = sc1.listIterator(4);
+        e.next();
+        assertEquals(Optional.of(5), Optional.of(e.next()));
     }
 
     @Test
     public void subList() {
+        List<Integer> list = sc1.subList(3, 8);
+        int count = 0;
+        for(int i: list){
+            count += i;
+        }
+        assertEquals(25, count);
+
     }
 }

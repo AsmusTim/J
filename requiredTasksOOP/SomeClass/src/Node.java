@@ -18,7 +18,7 @@ public class Node<T> {
     public T getData(){ return this.data; }
     public Node<T> getNext(){ return this.next; }
     public Node<T> getPrev(){ return this.prev; }
-    public void delNode(){
+    public void delThisNode(){
         Node<T> previousCurrent = this.getPrev();
         Node<T> nextCurrent = this.getNext();
 
