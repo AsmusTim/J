@@ -125,11 +125,10 @@ public class SomeClass<T> implements List<T> {
 
     @Override
     public <T1> T1[] toArray(T1[] a) {
-        Node<T> current = this.first;
         T1[] arr = (T1[]) new Object[this.size];
+        Iterator<T> e = this.iterator();
         for(int i = 0; i < this.size; ++i){
-            arr[i] = (T1) current.getData();
-            current = current.getNext();
+            arr[i] = (T1) e.next();
         }
         return arr;
     }

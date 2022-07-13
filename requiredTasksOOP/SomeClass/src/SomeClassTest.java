@@ -8,7 +8,7 @@ import static org.junit.Assert.*;
 public class SomeClassTest {
 
     SomeClass<Integer> sc1;
-    List sc2;
+    SomeClass sc2;
     List<Integer> list;
 
     @Before
@@ -83,7 +83,9 @@ public class SomeClassTest {
     @Test
     public void testToArray() {
         int[] arrForCheck = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
-        //int[] testArr = sc1.toArray(new int[0]);
+        int[] arr = new int[0];
+        arr = sc1.toArray(arr);
+
     }
 
     @Test
