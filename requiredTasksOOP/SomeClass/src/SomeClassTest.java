@@ -82,10 +82,9 @@ public class SomeClassTest {
 
     @Test
     public void testToArray() {
-        int[] arrForCheck = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
-        int[] arr = new int[0];
-        arr = sc1.toArray(arr);
-
+        Integer[] arrForCheck = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
+        Integer[] testArr = sc1.toArray(new Integer[4]);
+        assertArrayEquals(arrForCheck, testArr);
     }
 
     @Test

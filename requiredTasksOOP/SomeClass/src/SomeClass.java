@@ -115,22 +115,28 @@ public class SomeClass<T> implements List<T> {
     @Override
     public Object[] toArray() {
         Object[] arr = new Object[this.size];
-        Node<T> current = this.first;
         for(int i = 0; i < this.size(); ++i){
-            arr[i] = current.getData();
-            current = current.getNext();
+            arr[i] = this.get(i);
         }
         return arr;
     }
 
     @Override
     public <T1> T1[] toArray(T1[] a) {
-        T1[] arr = (T1[]) new Object[this.size];
-        Iterator<T> e = this.iterator();
-        for(int i = 0; i < this.size; ++i){
-            arr[i] = (T1) e.next();
+        if (a.length < this.size)
+            a = (T1[])java.lang.reflect.Array.newInstance(
+                    a.getClass().getComponentType(), size);
+        int i = 0;
+        Object[] result = a;
+        for (T t : this) {
+            result[i++] = t;
         }
-        return arr;
+
+        if (a.length > this.size)
+            a[this.size] = null;
+
+        return a;
+
     }
 
     @Override

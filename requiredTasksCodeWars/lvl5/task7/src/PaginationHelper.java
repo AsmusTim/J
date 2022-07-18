@@ -1,32 +1,24 @@
+import java.util.Arrays;
 import java.util.List;
 
 // TODO: complete this object/class
-
-
-       /*not complete*/
-
-
 public class PaginationHelper<I> {
 
     private  List<I> list;
     private int itemsPerPage;
+    private int pageCount;
 
     public PaginationHelper(List<I> collection, int itemsPerPage) {
         this.list = collection;
         this.itemsPerPage = itemsPerPage;
+        this.pageCount = (int) Math.ceil((double) collection.size() / (double) itemsPerPage);
     }
 
     public int itemCount() {
         return list.size();
     }
 
-    public int pageCount() {
-        int count = 0;
-        for(int i = 1; i < this.itemsPerPage; ++i){
-            if(this.list.size() - (this.itemsPerPage * i) < 0) count = i - 1;
-        }
-        return count;
-    }
+    public int pageCount() { return this.pageCount; }
 
     public int pageItemCount(int pageIndex) {
         int pCount = this.pageCount();
@@ -36,7 +28,14 @@ public class PaginationHelper<I> {
     }
 
     public int pageIndex(int itemIndex) {
-        if(itemIndex > list.size()) return -1;
-        return itemIndex / this.itemsPerPage;
+        if(itemIndex >= list.size()) return -1;
+        if(itemsPerPage <= 0) return -1;
+        return ;
+    }
+
+
+    public static void main(String[] args) {
+        PaginationHelper<Character> helper = new PaginationHelper<>(Arrays.asList('a', 'b', 'c', 'd', 'e', 'f', '1', '2', '3', '4', '5'), 4);
+        System.out.println(helper.pageIndex(1));
     }
 }
