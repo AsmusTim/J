@@ -1,7 +1,6 @@
 import java.util.Arrays;
 
 public class Main{
-
     public static Object[] filter(Object[] array, Filter filter){
         int offset = 0;
         for(int i = 0; i < array.length; ++i){
@@ -16,12 +15,6 @@ public class Main{
 
     public static void main(String[] args) {
         Integer[] arr = {1, 2, 3, 4, 5, 6 ,7 ,8, 9, 10};
-        System.out.println(Arrays.toString( filter(arr, new Filter() {
-            @Override
-            public boolean apply(Object o) {
-                return (int) o % 2 == 0;
-            }
-        })));
+        System.out.println(Arrays.toString( filter(arr, o -> (int) o % 2 == 0)));
     }
-
 }

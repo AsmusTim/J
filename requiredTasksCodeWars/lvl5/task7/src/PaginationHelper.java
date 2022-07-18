@@ -1,3 +1,5 @@
+//https://www.codewars.com/kata/515bb423de843ea99400000a
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -28,14 +30,13 @@ public class PaginationHelper<I> {
     }
 
     public int pageIndex(int itemIndex) {
-        if(itemIndex >= list.size()) return -1;
-        if(itemsPerPage <= 0) return -1;
-        return ;
+        if(itemIndex > list.size() || itemIndex < 0 || list.size() == 0 || itemsPerPage <= 0) return -1;
+        return itemIndex / itemsPerPage ;
     }
 
 
     public static void main(String[] args) {
-        PaginationHelper<Character> helper = new PaginationHelper<>(Arrays.asList('a', 'b', 'c', 'd', 'e', 'f', '1', '2', '3', '4', '5'), 4);
-        System.out.println(helper.pageIndex(1));
+        PaginationHelper<Character> helper = new PaginationHelper<>(Arrays.asList(), 4);
+        System.out.println(helper.pageIndex(0));
     }
 }
