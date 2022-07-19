@@ -1,3 +1,5 @@
+//https://www.codewars.com/kata/5279f6fe5ab7f447890006a7
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -11,15 +13,21 @@ public class PickPeaks {
     public static Map<String,List<Integer>> getPeaks(int[] arr) {
         ArrayList<Integer> peak = new ArrayList<>();
         ArrayList<Integer> pos = new ArrayList<>();
-        //int dis = 4;
-        for(int i = 2; i < arr.length - 2; ++i ){
-            if(/*dis > 2 &&*/ arr[i - 1] < arr[i] && arr[i] >= arr[i + 1]){
-                peak.add(arr[i]);
-                pos.add(i);
-                //dis = 0;
+
+        boolean growth = false;
+        int max = 0;
+        for(int i = 1; i < arr.length; ++i){
+            if(arr[i - 1] < arr[i]){
+                growth = true;
+                max = i;
             }
-            //dis++;
+            if(growth && arr[i - 1] > arr[i]){
+                peak.add(arr[max]);
+                pos.add(max);
+                growth = false;
+            }
         }
+
 
         HashMap<String, List<Integer>> map = new HashMap<>();
         map.put("peaks", peak);
