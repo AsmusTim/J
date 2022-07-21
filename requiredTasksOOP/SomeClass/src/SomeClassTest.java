@@ -66,7 +66,7 @@ public class SomeClassTest {
         for(int i = 0; i < 3 && e.hasNext(); ++i){
             e.next();
         }
-        assertEquals(Optional.of(3), Optional.ofNullable(e.next()));
+        assertEquals(Integer.valueOf(3), e.next());
         while (e.hasNext()){
             e.next();
         }
