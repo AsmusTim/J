@@ -11,6 +11,8 @@ public class HexToRGB {
 
             char[] color = hex.substring(i, i + 2).toLowerCase().toCharArray();
             for(int k = 0, p = 1; k < 2; ++k, p--){
+//                arr[j] = Integer.parseInt(String.valueOf(color), 16);
+
                 if('0' <= color[k] && color[k] <= '9'){
                     arr[j] += (color[k] - '0') * Math.pow(16, p);
                 }

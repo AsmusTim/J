@@ -15,6 +15,6 @@ public class CountIPAddresses {
     }
 
     public static void main(String[] args) {
-        System.out.println(ipsBetween( "10.0.0.0", "10.0.0.50" ));
+        System.out.println(ipsBetween( "10.0.0.0", "10.0.1.50" ));
     }
 }
