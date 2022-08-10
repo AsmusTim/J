@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a38eeeaa-c2f3-4327-8fe3-60f5157438a6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../CodeWars/lvl5/task21/src/Solution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StreamAPI/task1/src/Solution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StreamAPI/task2/src/Solution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StreamAPI/task3/src/Solution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StreamAPI/task4AndMore/src/Human.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StreamAPI/task4AndMore/src/Solution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StreamAPI/task4AndMore/src/Statistic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../multiThreading/task2FromFile/src/SaveAsThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../multiThreading/task2FromFile/src/WritingInFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Actions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/FolderTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TreeExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StringMerger.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2D6y4BzZMghqwoncpuu2xept7SF" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "settings.editor.selected.configurable": "configurable.group.appearance"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.Test">
+    <configuration name="FolderTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="FolderTree" />
+      <module name="test" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test" />
+      <module name="test" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TreeExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TreeExample" />
+      <module name="test" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.TreeExample" />
+        <item itemvalue="Application.FolderTree" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a38eeeaa-c2f3-4327-8fe3-60f5157438a6" name="Changes" comment="" />
+      <created>1660033636786</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1660033636786</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
