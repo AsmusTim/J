@@ -18,6 +18,7 @@ public class Solution {
             dataDirect.mkdir();
             lib.mkdir();
             environments.mkdir();
+            example.mkdirs();
             build.mkdirs();
         }
         if(!remote.isDirectory()){
@@ -43,6 +44,8 @@ public class Solution {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+
+
     }
 
 }
