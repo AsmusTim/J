@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a38eeeaa-c2f3-4327-8fe3-60f5157438a6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../CodeWars/lvl5/task21/src/Solution.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StreamAPI/task1/src/Solution.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StreamAPI/task2/src/Solution.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StreamAPI/task3/src/Solution.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StreamAPI/task4AndMore/src/Human.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StreamAPI/task4AndMore/src/Solution.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../StreamAPI/task4AndMore/src/Statistic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../multiThreading/task2FromFile/src/SaveAsThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../multiThreading/task2FromFile/src/WritingInFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Actions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FolderTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TreeExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StringMerger.java" beforeDir="false" />
-    </list>
+    <list default="true" id="a38eeeaa-c2f3-4327-8fe3-60f5157438a6" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,6 +30,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/home/user/Desktop/demo",
     "settings.editor.selected.configurable": "configurable.group.appearance"
   }
 }]]></component>
